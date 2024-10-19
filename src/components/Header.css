@@ -1,0 +1,63 @@
+.contactInfo {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f8f8f8; /* Light background for contact info */
+    padding: 10px 0;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon {
+    margin-right: 8px; /* Space between icon and text */
+    color: green; /* Change icon color to green */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333; /* Dark background for header */
+    color: white; /* Text color */
+}
+
+.logo {
+    font-size: 24px; /* Logo font size */
+    font-weight: bold;
+    color: green; /* Change logo color to green */
+}
+
+.nav {
+    display: flex;
+}
+
+.nav a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 15px; /* Space between links */
+}
+
+.nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.active {
+    font-weight: bold; /* Highlight active link */
+}
+
+.inquiriesButton {
+    background-color: #28a745; /* Green background for inquiries button */
+    color: white; /* Text color */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+}
+
+.green-line {
+    height: 5px; /* Thickness of the green line */
+    background-color: #28a745; /* Green color */
+}
