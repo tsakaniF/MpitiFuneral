@@ -1,26 +1,33 @@
 .contact-container {
-    max-width: 800px; /* Limit the width of the container */
+    max-width: 1200px; /* Limit the width of the container */
     margin: 0 auto; /* Center the container */
     padding: 20px;
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
-    color: #333; /* Dark color for the heading */
+    color: green; /* Dark color for the heading */
+}
+
+.contact-content {
+    display: flex; /* Use flexbox for two-column layout */
+    justify-content: space-between; /* Space between columns */
+    gap: 20px; /* Space between columns */
 }
 
 .contact-info {
-    margin-bottom: 30px; /* Space between contact info and form */
-    padding: 15px;
-    background-color: #f9f9f9; /* Light background for contact info */
+    flex: 1; /* Allow this column to grow */
+    background-color: #ffffff; /* Light background for contact info */
     border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 15px; /* Padding inside the contact info */
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column; /* Stack form elements vertically */
+    flex: 1; /* Allow this column to grow */
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside the form */
 }
 
 .contact-form input, 
@@ -30,9 +37,10 @@ h1 {
     border: 1px solid #ddd; /* Light border */
     border-radius: 5px; /* Rounded corners */
     font-size: 16px; /* Font size */
+    width: 100%; /* Full width */
 }
 
-.contact-form button {
+button {
     padding: 10px;
     background-color: #28a745; /* Green background for button */
     color: white; /* Text color */
@@ -43,7 +51,76 @@ h1 {
     transition: background-color 0.3s; /* Smooth transition */
 }
 
-.contact-form button:hover {
+button:hover {
     background-color: #218838; /* Darker green on hover */
 }
 
+.email-button {
+    margin: -10px 0 10px; /* Negative top margin to move it up */
+    padding: 10px 15px; /* Add padding for a button-like appearance */
+    font-size: 16px; /* Adjust font size if needed */
+    background-color: #28a745; /* Green background color */
+    color: white; /* White text color for contrast */
+    border-radius: 0x; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+    text-align: center; /* Center the text */
+    display: inline-block; /* Make it behave like a button */
+    text-decoration: none; /* Remove underline from text */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.email-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.contact-info p {
+    margin: 5px 0; /* Space between paragraphs */
+}
+
+.contact-info i {
+    margin-right: 8px; /* Space between icon and text */
+    color: #28a745; /* Green color for icons */
+}
+
+.hero-section {
+    position: relative; /* Position relative for absolute positioning of text */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Hide overflow */
+}
+
+.hero-image {
+    position: absolute; /* Position the image absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
+    z-index: 1; /* Ensure the image is behind the text */
+}
+
+.hero-text {
+    position: relative; /* Position text over the image */
+    text-align: left; /* Align text to the left */
+    color: white; /* Text color */
+    z-index: 2; /* Ensure the text is above the image */
+    padding-left: 20px; /* Add some padding to the left */
+    padding-top: 20px; /* Add some padding to the top */
+    transform: translateX(-100%); /* Start off-screen to the left */
+    animation: slideIn 1s forwards; /* Apply slide-in animation */
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0); /* Move to original position */
+    }
+}
+
+.hero-text h1 {
+    font-size: 2.5rem; /* Adjust font size */
+    margin: 0; /* Remove default margin */
+}
+
+.hero-text p {
+    font-size: 1.2rem; /* Adjust font size */
+}
