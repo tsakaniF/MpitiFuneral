@@ -5,6 +5,7 @@
     background-color: #ffffff; /* White background for contrast */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative; /* Position relative for absolute positioning of text */
 }
 
 h1 {
@@ -56,4 +57,38 @@ h2 {
 .team-member p {
     margin: 5px 0 0; /* Space above and below the role */
     color: #777; /* Lighter gray for roles */
+}
+
+.hero-section {
+    position: relative; /* Position relative for absolute positioning of text */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Hide overflow */
+}
+
+.hero-image {
+    position: absolute; /* Position the image absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
+    z-index: 1; /* Ensure the image is behind the text */
+}
+
+.hero-text {
+    position: relative; /* Position text over the image */
+    text-align: center; /* Center text */
+    color: white; /* Text color */
+    z-index: 2; /* Ensure the text is above the image */
+    padding: 20px; /* Add some padding */
+}
+
+.hero-text h1 {
+    font-size: 3rem; /* Adjust font size */
+    margin: 0; /* Remove default margin */
+}
+
+.hero-text p {
+    font-size: 1.5rem; /* Adjust font size */
 }
